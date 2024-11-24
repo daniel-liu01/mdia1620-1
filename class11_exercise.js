@@ -28,6 +28,7 @@ function AddUserToRegistry() {
   //user readline to prompt for the name of the user to be added
   if(settings.addRegistry === true){
     readline.question("What is the name of the user?", _user=>{
+      // Each user I try to add is showing as banned, it might be the "=" that is causing trouble here(?) -Daniel
       if(_user = banned){
       console.log("This user is banned")
       StartApp();
@@ -69,6 +70,7 @@ function CheckBanned(){
   StartApp();
 }
 
+// I like how you did this here, instead of toggling you ask for a yes or no input, which totally works as well -Daniel
 function Runsettings(){
   readline.question('Would you like to allow adding? (yes/no)', _mode =>{
     if(_mode === "yes"){
@@ -108,7 +110,7 @@ function StartApp() {
 }
 
 StartApp();
-
+//Put the plan at the top so users can have more clarity! -Daniel
 /*
 
 Plan: 
